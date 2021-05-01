@@ -24,7 +24,7 @@ export default function Home() {
               <p>Cognitive training for gaming's athletes</p>
 
               <Button
-                style={{ padding: "10px 100px 10px 100px", borderRadius: "20px" }}
+                style={{ backgroundColor:"#3399FF", padding: "10px 100px 10px 100px", borderRadius: "20px" }}
                 variant="contained" color="primary">
                 Join Now
               </Button>
@@ -36,7 +36,7 @@ export default function Home() {
           <Grid container spacing={3}>
 
             <Grid item sm={6}>
-              <h3>Don't train to win,<br />Train to <span>dominate</span></h3>
+              <h3>Don't train to win,<br />Train to <span className={styles.strong} className={styles.strong}>dominate</span></h3>
               <br />
               <p>
                 Who likes to lose? Nobody, especially you.
@@ -55,7 +55,7 @@ export default function Home() {
         <div className={styles.banner}>
 
           <h3>Artificial intelligence meets modern neuroscience</h3>
-          <h2>TO MAKE YOU AN <span>ELITE GAMER</span></h2>
+          <h2>TO MAKE YOU AN <span className={styles.strong}>ELITE GAMER</span></h2>
 
         </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
             </Grid>
 
             <Grid item sm={6}>
-              <h3>Disciplined as a <span>soldier</span><br />Reactive as a <span>ninja</span></h3>
+              <h3>Disciplined as a <span className={styles.strong}>soldier</span><br />Reactive as a <span className={styles.strong}>ninja</span></h3>
               <br />
               <p>
                 Driven by AI, Gameletics training makes you faster, smarter, ready to rule the game.
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
 
         <Grid container spacing={3}>
-          <Grid className={styles.gamesMoba} item xs={6}>
+          <Grid className={styles.gamesMoba} item xs>
             <div>
               <h1>MOBA</h1>
               <p>League of Legens</p>
@@ -99,7 +99,7 @@ export default function Home() {
               <p>& More</p>
             </div>
           </Grid>
-          <Grid className={styles.gamesFps} item xs={6}>
+          <Grid className={styles.gamesFps} item xs>
             <h1>FPS</h1>
             <p>Call of Duty</p>
             <p>Counter-Strike</p>
@@ -115,7 +115,7 @@ export default function Home() {
 
         <div className={styles.subscribe}>
           <div id="subscribe">
-            <h2>Join Now and get <span>3 months of free coaching</span></h2>
+            <h2>Join Now and get <span className={styles.strong}>3 months of free coaching</span></h2>
             <h4>Start now your journey to the gaming excellence</h4>
 
             <form>
