@@ -22,7 +22,7 @@ export default function Home() {
     setValue(e.target.value)
   }
 
-  const onFormSubmit = preventDefault(async () => {
+  const onFormSubmit = preventDefault(() => {
 
     console.log("onFormSubmit")
     setLoading(true);
@@ -34,7 +34,7 @@ export default function Home() {
     };
 
     
-    await fetch('api/contact', requestOptions).then(() => {
+    fetch('api/contact', requestOptions).then(() => {
       router.push("https://qlj7h9sfxo2.typeform.com/to/ZckU1Ted")
     })
     
