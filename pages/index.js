@@ -33,9 +33,9 @@ export default function Home() {
         </div>
 
         <div className={styles.infoLeft}>
-          <Grid container spacing={3}>
+          <Grid container style={{minWidth:"100%"}} spacing={3}>
 
-            <Grid item>
+            <Grid item sm>
               <h3>Don't train to win,<br />Train to <span className={styles.strong} className={styles.strong}>dominate</span></h3>
               <br />
               <p>

@@ -1,5 +1,5 @@
 .hero {
-  min-height: 80vh; /* These two lines are counted as one :-)       */
+  min-height: 80vh;
   background: linear-gradient(to right,#000000aa, #000000aa), url("../public/img/hero-image.jpg");
   background-repeat: no-repeat;
   background-size:cover;
@@ -172,7 +172,7 @@
 
 
 .subscribe input {
-  width: 30em;
+  width: 50vh;
   margin-top: 4vh;
   margin-bottom: 6vh;
   font-size: 1.2em;
@@ -210,22 +210,53 @@
 }
 
 @media screen and (orientation: portrait) {
+ 
+  .hero {
+    min-height:60vh;
+  }
+
+  .hero img{
+    width: 30vh;
+  }
+  
+  .hero h2{
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 10vh;
+    margin-bottom:0;
+  }
+  
+  .hero h1 {
+    margin-top:0;
+    font-size: 3em;
+    font-weight:bolder;
+  }
+  
+  .hero p {
+    margin-top: 10vh;
+    font-size: 1.3em;
+    margin-bottom: 10vh;
+  }
   
   .infoLeft, .infoRight {
     margin-left:4vh;
     margin-left:4vh;
     text-align: center;
-    display: flex;
-    align-items: center;  
   }
   
   .infoLeft img, .infoRight img {
     width: 35vh;
     display: flex;
     align-items: center;  
+    margin-left:auto;
+    margin-right: auto;
   }
 
   .gamesMoba, .gamesFps {
     min-width:100%;
+  }
+
+  .subscribe input {
+    width:80%;
   }
 }
