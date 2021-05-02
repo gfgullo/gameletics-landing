@@ -35,7 +35,7 @@ export default function Home() {
         <div className={styles.infoLeft}>
           <Grid container spacing={3}>
 
-            <Grid item sm={6}>
+            <Grid item>
               <h3>Don't train to win,<br />Train to <span className={styles.strong} className={styles.strong}>dominate</span></h3>
               <br />
               <p>
@@ -46,7 +46,7 @@ export default function Home() {
                         We gathered together pro gamers, programmers and neuroscientists to create the first cognitive training platform for competitive players.
                     </p>
             </Grid>
-            <Grid item sm={6}>
+            <Grid item sm>
               <img src="img/chart.png" />
             </Grid>
           </Grid>
@@ -62,11 +62,11 @@ export default function Home() {
         <div className={styles.infoRight}>
           <Grid container spacing={3}>
 
-            <Grid item sm={6}>
+            <Grid item sm>
               <img src="img/app-iphone.png" />
             </Grid>
 
-            <Grid item sm={6}>
+            <Grid item sm>
               <h3>Disciplined as a <span className={styles.strong}>soldier</span><br />Reactive as a <span className={styles.strong}>ninja</span></h3>
               <br />
               <p>

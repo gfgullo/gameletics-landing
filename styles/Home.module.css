@@ -1,10 +1,3 @@
-
-.verticalCenter {
-  display: flex;
-  align-items: center;
-}
-
-
 .hero {
   min-height: 80vh; /* These two lines are counted as one :-)       */
   background: linear-gradient(to right,#000000aa, #000000aa), url("../public/img/hero-image.jpg");
@@ -47,9 +40,9 @@
 }
 
 .infoLeft, .infoRight {
-  margin: 4em 10em 4em 10em;
-  margin-top: 4em;
-  margin-bottom: 4em;
+  margin: 8vh 20vh 8vh 20vh;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
   display: flex;
   align-items: center;
 }
@@ -80,7 +73,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .banner {
   background: linear-gradient(to right,#000000aa, #000000aa), url("../public/img/data.jpg");
@@ -219,15 +211,21 @@
 
 @media screen and (orientation: portrait) {
   
-  .infoLeft img, .infoRight img {
-      float:none;
-      display: block;
-margin-left: auto;
-margin-right: auto;
-
+  .infoLeft, .infoRight {
+    margin-left:4vh;
+    margin-left:4vh;
+    text-align: center;
+    display: flex;
+    align-items: center;  
   }
   
-  .mobile-spacing {
-  margin-top: 4em;
+  .infoLeft img, .infoRight img {
+    width: 35vh;
+    display: flex;
+    align-items: center;  
+  }
+
+  .gamesMoba, .gamesFps {
+    min-width:100%;
   }
 }
