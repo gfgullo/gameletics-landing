@@ -1,9 +1,44 @@
+import { useState } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import { Grid, Box } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 
+const preventDefault = f => e => {
+  e.preventDefault()
+  f(e)
+}
+
 export default function Home() {
+
+  const router = useRouter()
+  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState(false)
+
+
+  const onFormChange = setValue => e => {
+    console.log("onFormChange")
+    setValue(e.target.value)
+  }
+
+  const onFormSubmit = preventDefault(async () => {
+
+    console.log("onFormSubmit")
+    setLoading(true);
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, language: navigator.language })
+    };
+
+    
+    await fetch('api/contact', requestOptions).then(() => {
+      router.push("https://qlj7h9sfxo2.typeform.com/to/ZckU1Ted")
+    })
+    
+  })
 
   return (
     <div className={styles.container}>
@@ -24,7 +59,7 @@ export default function Home() {
               <p>Cognitive training for gaming's athletes</p>
 
               <Button
-                style={{ backgroundColor:"#3399FF", padding: "10px 100px 10px 100px", borderRadius: "20px" }}
+                style={{ backgroundColor: "#3399FF", padding: "10px 100px 10px 100px", borderRadius: "20px" }}
                 variant="contained" color="primary">
                 Join Now
               </Button>
@@ -33,7 +68,7 @@ export default function Home() {
         </div>
 
         <div className={styles.infoLeft}>
-          <Grid container style={{minWidth:"100%"}} spacing={3}>
+          <Grid container style={{ minWidth: "100%" }} spacing={3}>
 
             <Grid item sm>
               <h3>Don't train to win,<br />Train to <span className={styles.strong} className={styles.strong}>dominate</span></h3>
@@ -46,7 +81,7 @@ export default function Home() {
                         We gathered together pro gamers, programmers and neuroscientists to create the first cognitive training platform for competitive players.
                     </p>
             </Grid>
-            <Grid item sm>
+            <Grid item sm style={{ marginLeft: "auto", marginRight: "auto" }}>
               <img src="img/chart.png" />
             </Grid>
           </Grid>
@@ -60,9 +95,9 @@ export default function Home() {
         </div>
 
         <div className={styles.infoRight}>
-          <Grid container spacing={3}>
+          <Grid container style={{ minWidth: "100%" }} spacing={3}>
 
-            <Grid item sm>
+            <Grid item sm style={{ marginLeft: "auto", marginRight: "auto" }}>
               <img src="img/app-iphone.png" />
             </Grid>
 
@@ -119,13 +154,25 @@ export default function Home() {
             <h4>Start now your journey to the gaming excellence</h4>
 
             <form>
-              <input type="email" id="email" placeholder="ENTER YOUR EMAIL..." />
+              <input type="email"
+                id="email"
+                placeholder="ENTER YOUR EMAIL..."
+                value={email}
+                onChange={onFormChange(setEmail)}
+              />
               <br />
-              <Button
-                style={{ padding: "10px 100px 10px 100px", borderRadius: "20px" }}
-                variant="contained" color="primary">
-                Join
-              </Button>
+              {loading ? (
+                <h5>Loading your game...</h5>
+              ) :
+                (
+                  <Button
+                    onClick={onFormSubmit}
+                    style={{ padding: "10px 100px 10px 100px", borderRadius: "20px" }}
+                    variant="contained" color="primary">
+                    Join
+                  </Button>
+                )
+              }
             </form>
 
             <p>By clicking "Join" you agree to Gameletics' privacy policy and terms of service.</p>
@@ -137,9 +184,9 @@ export default function Home() {
       </main >
 
       <footer className={styles.footer}>
-      <img src="img/logo.png" />
-            <p>Unleash your gaming's superpowers</p>
-            <a href="/privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+        <img src="img/logo.png" />
+        <p>Unleash your gaming's superpowers</p>
+        <a href="/privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
       </footer>
     </div >
   );

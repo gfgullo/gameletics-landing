@@ -233,23 +233,19 @@
   }
   
   .hero p {
-    margin-top: 10vh;
+    margin-top: 5vh;
     font-size: 1.3em;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
   }
   
   .infoLeft, .infoRight {
     margin-left:4vh;
-    margin-left:4vh;
+    margin-right:4vh;
     text-align: center;
   }
   
   .infoLeft img, .infoRight img {
     width: 35vh;
-    display: flex;
-    align-items: center;  
-    margin-left:auto;
-    margin-right: auto;
   }
 
   .gamesMoba, .gamesFps {
@@ -259,4 +255,9 @@
   .subscribe input {
     width:80%;
   }
+
+  .MuiGrid-spacing-xs-3 {
+    margin:0;
+    width:100%;
+  } 
 }
