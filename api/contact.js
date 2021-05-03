@@ -26,7 +26,10 @@ catch (error){
   docRef.set({
     email: email,
     language: language,
+  }).then(() => {
+    res.status(200).send(`Hello ${email}!`)
+  })
+  .catch((error) => {
+    res.json({ error });
   });
-
-  res.status(200).send(`Hello ${email}!`)
 }
