@@ -59,6 +59,7 @@ export default function Home() {
               <p>Cognitive training for gaming's athletes</p>
 
               <Button
+                href="#subscribe"
                 style={{ backgroundColor: "#3399FF", padding: "10px 100px 10px 100px", borderRadius: "20px" }}
                 variant="contained" color="primary">
                 Join Now
