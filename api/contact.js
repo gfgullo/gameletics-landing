@@ -1,6 +1,6 @@
 const admin = require("firebase-admin");
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
 
   const email = req.body.email
   const language = req.body.language
@@ -23,13 +23,10 @@ catch (error){
 
   const db = admin.firestore();
   const docRef = db.collection("gameletics").doc(email);
-  docRef.set({
+  await docRef.set({
     email: email,
     language: language,
-  }).then(() => {
-    res.status(200).send(`Hello ${email}!`)
   })
-  .catch((error) => {
-    res.json({ error });
-  });
+  
+  res.status(200).send(`Hello ${email}!`)
 }
