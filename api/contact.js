@@ -5,8 +5,6 @@ module.exports = (req, res) => {
   const email = req.body.email
   const language = req.body.language
 
-  console.log(process.env.PRIVATE_KEY)
-
   try {
   admin.initializeApp({
     credential: admin.credential.cert({
