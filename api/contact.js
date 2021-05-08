@@ -5,12 +5,14 @@ module.exports = (req, res) => {
   const email = req.body.email
   const language = req.body.language
 
+  console.log(process.env.PRIVATE_KEY)
+
   try {
   admin.initializeApp({
     credential: admin.credential.cert({
-      project_id: "gameletics-eaa39",
-      private_key: "",
-      client_email: "firebase-adminsdk-9hmeh@gameletics-eaa39.iam.gserviceaccount.com"
+      project_id: process.env.PROJECT_ID,
+      private_key: process.env.PRIVATE_KEY,
+      client_email: process.env.CLIENT_EMAIL
     }),
   });
 }
