@@ -18,7 +18,6 @@ module.exports = (req, res) => {
 }
 catch (error){
   if (!/already exists/u.test(error.message)) {
-    // eslint-disable-next-line no-console
     console.error('Firebase admin initialization error', error.stack);
   }
 }
