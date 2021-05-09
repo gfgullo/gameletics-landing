@@ -53,7 +53,7 @@ export default function Home() {
 
           <div>
             <div>
-              <img src="img/logo.png" />
+              <img src="/images/logo.png" />
               <h2>Unleash your gaming's</h2>
               <h1>SUPERPOWERS</h1>
               <p>Cognitive training for gaming's athletes</p>
@@ -83,7 +83,7 @@ export default function Home() {
                     </p>
             </Grid>
             <Grid item sm style={{ marginLeft: "auto", marginRight: "auto" }}>
-              <img src="img/chart.png" />
+              <img src="/images/chart.png" />
             </Grid>
           </Grid>
         </div>
@@ -99,7 +99,7 @@ export default function Home() {
           <Grid container style={{ minWidth: "100%" }} spacing={3}>
 
             <Grid item sm style={{ marginLeft: "auto", marginRight: "auto" }}>
-              <img src="img/app-iphone.png" />
+              <img src="/images/app-iphone.png" />
             </Grid>
 
             <Grid item sm>
@@ -185,7 +185,7 @@ export default function Home() {
       </main >
 
       <footer className={styles.footer}>
-        <img src="img/logo.png" />
+        <img src="/images/logo.png" />
         <p>Unleash your gaming's superpowers</p>
         <a href="/privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
       </footer>
