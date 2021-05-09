@@ -1,6 +1,6 @@
 .hero {
   min-height: 80vh;
-  background: linear-gradient(to right,#000000aa, #000000aa), url("../public/img/hero-image.jpg");
+  background: linear-gradient(to right,#000000aa, #000000aa), url("/images/hero-image.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
@@ -75,7 +75,7 @@
 }
 
 .banner {
-  background: linear-gradient(to right,#000000aa, #000000aa), url("/public/images/data.jpg");
+  background: linear-gradient(to right,#000000aa, #000000aa), url("/images/data.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-align:center;
@@ -124,13 +124,13 @@
 }
 
 .gamesMoba {
-  background: linear-gradient(to right,#000000aa, #000000aa), url("/public/images/moba.jpg");
+  background: linear-gradient(to right,#000000aa, #000000aa), url("/images/moba.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .gamesFps {
-  background: linear-gradient(to right,#000000aa, #000000aa), url("/public/images/fps.jpg");
+  background: linear-gradient(to right,#000000aa, #000000aa), url("/images/fps.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
